@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "617891362283",
+    "project_id": "aplicaciongestiondegastos",
+    "storage_bucket": "aplicaciongestiondegastos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617891362283:android:b94ea237473875d8c895ae",
+        "android_client_info": {
+          "package_name": "com.example.aplicaciondegestiondegastos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617891362283-mm72dh558decnjspiqgmd667fi6ahsms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aplicaciondegestiondegastos",
+            "certificate_hash": "f7266752d5501554cd08beb5bfc1e48ff64c9cf9"
+          }
+        },
+        {
+          "client_id": "617891362283-c6tb6jg3rjgruob20db5t7u7rtlaaj5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBnSDngsH5lFxrZaRJdeMrcOuprPeFjEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617891362283-c6tb6jg3rjgruob20db5t7u7rtlaaj5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
