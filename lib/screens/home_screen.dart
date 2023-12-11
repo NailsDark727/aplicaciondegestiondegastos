@@ -269,7 +269,7 @@ class HomeContent extends StatelessWidget {
                         return Column(
                           children: [
                             Text(
-                              'BIENVENIDO DE VUELTA, $userName',
+                              'BIENVENIDO, $userName',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,

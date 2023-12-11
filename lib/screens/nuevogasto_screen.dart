@@ -487,7 +487,17 @@ class _NuevoGastoScreenState extends State<NuevoGastoScreen> {
                                 child: Text('Cancelar'),
                               ),
                               TextButton(
-                                onPressed: () {
+                                onPressed: () async {
+                                  if (user?.uid != null) {
+                                    await FirebaseFirestore.instance
+                                        .collection('Users')
+                                        .doc(user!.uid)
+                                        .collection('presupuesto')
+                                        .doc(selectedTipoPresupuesto)
+                                        .delete();
+                                  } else {
+                                    print('Error: user es nulo');
+                                  }
                                   Navigator.of(context).pop(true);
                                 },
                                 child: Text('Continuar'),

@@ -41,6 +41,29 @@ class _MyPresupuestoState extends State<MyPresupuesto> {
 
   void _guardarPresupuesto() async {
     try {
+      if (_presupuestoController.text.isEmpty ||
+          double.parse(_presupuestoController.text) == 0 ||
+          selectedPresupuesto == 'Seleccione tipo de presupuesto') {
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text("Alerta"),
+              content: Text("Por favor, complete todos los campos."),
+              actions: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text("Cerrar"),
+                ),
+              ],
+            );
+          },
+        );
+        return;
+      }
+
       final User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         final firestore = FirebaseFirestore.instance;
@@ -59,7 +82,7 @@ class _MyPresupuestoState extends State<MyPresupuesto> {
             return AlertDialog(
               title: Text("Alerta"),
               content: Text(
-                  "El presupuesto fue guardado en la aplicacion, recuerda ser responsable con tus gastos"),
+                  "El presupuesto fue guardado en la aplicación, recuerda ser responsable con tus gastos"),
               actions: [
                 ElevatedButton(
                   onPressed: () {

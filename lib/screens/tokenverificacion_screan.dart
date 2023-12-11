@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController _miController = TextEditingController();
-    TextEditingController _nuevoEmailController = TextEditingController();
+    //TextEditingController _nuevoEmailController = TextEditingController();
     //SingUpScreen signUpScreen = SingUpScreen();
 
     return MaterialApp(
@@ -132,7 +132,7 @@ class MyApp extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        showDialog(
+                        /*showDialog(
                           context: context,
                           builder: (context) {
                             return AlertDialog(
@@ -213,10 +213,10 @@ class MyApp extends StatelessWidget {
                               ],
                             );
                           },
-                        );
+                        );*/
                       },
                       child: Text(
-                        "¿Correo incorrecto? EDITE SU CORREO",
+                        "¿Correo incorrecto? RETROCEDA E INGRESE EL CORREO CORRECTO",
                         style: TextStyle(
                           color: Colors.black54,
                           fontWeight: FontWeight.bold,

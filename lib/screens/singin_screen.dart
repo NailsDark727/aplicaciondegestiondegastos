@@ -4,6 +4,7 @@ import 'package:aplicaciondegestiondegastos/screens/singup_screen.dart';
 import 'package:aplicaciondegestiondegastos/utils/colors_utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -49,7 +50,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   logoWidget("assets/images/logochanchito.png"),
                   SizedBox(height: 30),
                   reusableTextFieldWidget(
-                    labelText: "Ingresa su usuario",
+                    labelText: "Ingresa su correo",
                     icon: Icons.verified_user,
                     isPassword: false,
                     controller: _correoTextController,
@@ -60,7 +61,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     },
                   ),
                   _isCorreoEmpty
-                      ? Text("USUARIO NO INGRESADO",
+                      ? Text("CORREO NO INGRESADO",
                           style: TextStyle(color: Colors.red))
                       : SizedBox.shrink(),
                   /*reusableTextField(
@@ -106,7 +107,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   SizedBox(height: 30),
                   _showError
                       ? Text(
-                          "USUARIO O CONTRASEÑA INCORRECTA",
+                          "CORREO O CONTRASEÑA INCORRECTA",
                           style: TextStyle(color: Colors.red),
                         )
                       : SizedBox.shrink(),
