@@ -153,6 +153,7 @@ class _NuevoGastoScreenState extends State<NuevoGastoScreen> {
                       ),
                       items: <String>[
                         'Seleccione banco',
+                        'Ningun banco',
                         'BANCO BICE',
                         'BANCO CONSORCIO',
                         'BANCO CORP BANCA',
